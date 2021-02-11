@@ -36,7 +36,7 @@ const game = {
   },
 
 
-  buttonPressed: function(direction) {
+  movePlayer: function(dir) {
     // subtract one from the movesLeft of the player
     // check the direction, and change the rows or columns accordingly
 
@@ -45,9 +45,13 @@ const game = {
     this.render();
   },
 
-  // function to initialise the controller buttons
-  // search for all the buttons, and assign the buttonPressed action, with the ID as the direction
+  // function to initialise the controller
   initButtons: function(){
+    const buttons = document.getElementsByClassName('control-btn');
+    Array.from(buttons).forEach(button => {
+      const dir = button.id;
+      button.addEventListener('click', (e) =>  this.movePlayer(dir))
+    });
   }
 }
 
