@@ -1,5 +1,7 @@
 # WC1 - game of DOM
 
+![runthrough](./images/runthrough.gif)
+
 Zorg ervoor dat het spel werkt. De instructies staan inline bij de code.
 In volgorde:
 
